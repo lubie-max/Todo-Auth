@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body%}
+  <h1>Update Task</h1>
+ <a href="{% url 'home' %}"> <button class="btn btn-success">Go Back</button></a>
+  <form action="" method="post">
+    {{form}}
+    {% csrf_token %}
+    <input type="submit" value="submit">
+   </form>
+{% endblock body%}
