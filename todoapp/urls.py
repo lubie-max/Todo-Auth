@@ -13,7 +13,8 @@ urlpatterns = [
     path('create-task/', CreateTask.as_view() , name= 'create-task' ),
     path('update/<int:pk>/', UpdateTask.as_view() , name= 'update-task' ),
     path('delete/<int:pk>/', DeleteTask.as_view() , name= 'delete-task' ),
-    path('login/' , CostomLogin.as_view(), name='login'),
+    path('login/' , CustomLogin.as_view(), name='login'),
+    path('register/' , RegisterUser.as_view(), name='register'),
     path('logout/' , LogoutView.as_view(next_page= 'login'), name='logout'),
 
 ]
